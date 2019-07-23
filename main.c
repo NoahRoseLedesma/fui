@@ -245,6 +245,15 @@ bool HandleInput( int input ) {
   // Switch on the character, as opposed to it's attributes which are stored
   // in the chtype structure.
   switch( input ) {
+    // H J K L may be used instead of the arrow keys
+    case 'h':
+      return HandleInput( KEY_LEFT );
+    case 'j':
+      return HandleInput( KEY_DOWN );
+    case 'k':
+      return HandleInput( KEY_UP );
+    case 'l':
+      return HandleInput( KEY_RIGHT );
     case KEY_UP:
     case KEY_LEFT:
     case KEY_DOWN:
